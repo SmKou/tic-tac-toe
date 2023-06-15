@@ -12,6 +12,8 @@ main {
 
 header {
     width: 100%;
+    max-width: 640px;
+    padding: 20px;
 }
 
 .gameboard {
@@ -103,4 +105,18 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.buttons button {
+    height: 38px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    color: lightblue;
+    background: aliceblue;
+    font-size: 18px;
+}
+
+button.active {
+    color: moccasin;
+    background: goldenrod;
 }
