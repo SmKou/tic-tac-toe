@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+}
+
+main {
+    width: 98%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+}
+
+.gameboard {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.gameboard::before {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 310px;
+    height: 310px;
+    border: 1px solid black;
+    z-index: -1;
+}
+
+.row {
+    width: 300px;
+    height: 100px;
+    display: flex;
+}
+
+.square {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background: lightgray;
+}
+
+.square.x::before,
+.square.x::after,
+.square.o::before,
+.square.o::after {
+    position: absolute;
+    content: '';
+}
+
+.square.x::before,
+.square.x::after {
+    top: 10px;
+    left: 40px;
+    width: 20px;
+    height: 80px;
+    background: black;
+}
+
+.square.x::before {
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.square.x::after {
+    transform: rotate(45deg);
+    z-index: 2;
+}
+
+.square.o::before {
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: black;
+    z-index: 1;
+}
+
+.square.o::after {
+    top: 30px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: lightgray;
+    z-index: 2;
+}
+
+.buttons {
+    width: 85%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
